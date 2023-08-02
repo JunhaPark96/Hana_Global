@@ -1,4 +1,4 @@
-package com.kopo.hanaglobal.web.conrtoller;
+package com.kopo.hanaglobal.hana_global.web.conrtoller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
