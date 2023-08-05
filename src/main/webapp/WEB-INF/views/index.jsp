@@ -27,6 +27,7 @@
             </select>
         </div>
     </div>
+
     <div class="main-area">
         <div class="main-left">
             <div class="card card1">
@@ -67,9 +68,10 @@
             <div class="main-info">
                 <div class="main-image"></div>
                 <div class="main-text">
-                    All-In-One Banking System <br>
-                    check your account balance and transaction history
-                    24 hours 365 days
+                    <h3>All-In-One Banking System</h3> <br>
+                    simpler<br>
+                    easier<br>
+                    faster
                 </div>
             </div>
             <div class="user-info">
@@ -95,5 +97,13 @@
     <footer>
     </footer>
 </div>
+
+<script>
+    $(function(){
+        $("#header").load("header.html");
+        $(".navbar").load("./includes/navbar.html");
+    });
+</script>
 </body>
+
 </html>
