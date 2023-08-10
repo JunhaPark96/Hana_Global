@@ -5,13 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hana2.0+B&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Hana2.0+H&display=swap" rel="stylesheet" />
+
+    <link href="css/header.css" rel="stylesheet" />
+    <link href="css/TTF.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
 <div class="main-container">
     <div class="header">
         <div class="logo">
-            <a href="index.html">
+            <a href="/">
                 <img src="./images/hana_logo.png" class="hana_logo" alt="하나로고">
             </a>
         </div>
@@ -27,7 +32,6 @@
             </select>
         </div>
     </div>
-
     <div class="main-area">
         <div class="main-left">
             <div class="card card1">
@@ -39,7 +43,7 @@
                 </a>
             </div>
             <div class="card card2">
-                <a href="exchange.html">
+                <a href="./exchange.jsp">
                     <div class="card-image card-image2" alt="환전"></div>
                     <div class="card-text">
                         Exchange
@@ -98,12 +102,6 @@
     </footer>
 </div>
 
-<script>
-    $(function(){
-        $("#header").load("header.html");
-        $(".navbar").load("./includes/navbar.html");
-    });
-</script>
 </body>
 
 </html>

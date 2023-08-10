@@ -32,7 +32,7 @@
 </head>
 <body>
 <div class="main-container">
-    <div id="header"></div>
+    <%@ include file="/WEB-INF/views/includes/header.jsp" %>
     <div class="main-area">
         <div class="navbar"></div>
 
@@ -45,12 +45,6 @@
     </footer>
 </div>
 
-<script>
-    $(function(){
-        $("#header").load("./includes/header.html");
-        $(".navbar").load("./includes/navbar.html");
-    });
-</script>
 </body>
 </html>
 </body>
