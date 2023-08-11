@@ -1,3 +1,4 @@
+<%@ page import="com.kopo.hanaglobal.hana_global.web.dto.MemberDTO" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
+<%
+    MemberDTO loginUser = (MemberDTO) session.getAttribute("loginUser");
+%>
 <div class="header">
     <div class="logo">
         <a href="/">
@@ -14,7 +17,12 @@
         </a>
     </div>
     <div class="login-box">
+        <% if (loginUser == null) { %>
+        <div class="signin">Signin</div>
+        <div class="signup">Signup</div>
+        <% } else { %>
         <div class="signup">SignOut</div>
+        <% } %>
     </div>
     <div class="language">
         <select id="language-select">

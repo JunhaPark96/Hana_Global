@@ -27,4 +27,9 @@ public class MainController {
         System.out.println("transfer 페이지");
         return "transfer";
     }
+    @GetMapping("/signUp")
+    public String singUp(){
+        System.out.println("signUp 페이지");
+        return "signUp";
+    }
 }

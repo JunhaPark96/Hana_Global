@@ -1,3 +1,4 @@
+<%@ page import="com.kopo.hanaglobal.hana_global.web.dto.MemberDTO" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +14,13 @@
     <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
+<%
+    MemberDTO loginUser = (MemberDTO) session.getAttribute("loginUser");
+    String redirectURL = (loginUser == null) ? "/signUp" : "";
+%>
+
 <div class="main-container">
+<%--    <%@ include file="/WEB-INF/views/includes/header.jsp" %>--%>
     <div class="header">
         <div class="logo">
             <a href="/">
@@ -35,7 +42,7 @@
     <div class="main-area">
         <div class="main-left">
             <div class="card card1">
-                <a href="/account">
+                <a href="<%= redirectURL != "" ? redirectURL : "/account" %>">
                     <div class="card-image card-image1" alt="계좌"></div>
                     <div class="card-text">
                         Account
@@ -43,7 +50,7 @@
                 </a>
             </div>
             <div class="card card2">
-                <a href="/exchange">
+                <a href="<%= redirectURL != "" ? redirectURL : "/exchange" %>">
                     <div class="card-image card-image2" alt="환전"></div>
                     <div class="card-text">
                         Exchange
@@ -51,7 +58,7 @@
                 </a>
             </div>
             <div class="card card3">
-                <a href="pay">
+                <a href="<%= redirectURL != "" ? redirectURL : "/pay" %>">
                     <div class="card-image card-image3" alt="페이"></div>
                     <div class="card-text">
                         기능3
@@ -59,7 +66,7 @@
                 </a>
             </div>
             <div class="card card4">
-                <a href="transfer">
+                <a href="<%= redirectURL != "" ? redirectURL : "/transfer" %>">
                     <div class="card-image card-image4" alt="송금"></div>
                     <div class="card-text">
                         Transfer
