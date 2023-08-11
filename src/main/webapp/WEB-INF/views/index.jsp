@@ -35,7 +35,7 @@
     <div class="main-area">
         <div class="main-left">
             <div class="card card1">
-                <a href="account.html">
+                <a href="/account">
                     <div class="card-image card-image1" alt="계좌"></div>
                     <div class="card-text">
                         Account
@@ -43,7 +43,7 @@
                 </a>
             </div>
             <div class="card card2">
-                <a href="./exchange.jsp">
+                <a href="/exchange">
                     <div class="card-image card-image2" alt="환전"></div>
                     <div class="card-text">
                         Exchange
@@ -51,7 +51,7 @@
                 </a>
             </div>
             <div class="card card3">
-                <a href="pay.html">
+                <a href="pay">
                     <div class="card-image card-image3" alt="페이"></div>
                     <div class="card-text">
                         기능3
@@ -59,7 +59,7 @@
                 </a>
             </div>
             <div class="card card4">
-                <a href="transfer.html">
+                <a href="transfer">
                     <div class="card-image card-image4" alt="송금"></div>
                     <div class="card-text">
                         Transfer

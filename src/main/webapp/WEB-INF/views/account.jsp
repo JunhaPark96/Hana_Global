@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: JUNHA
   Date: 2023-08-10
-  Time: 오후 8:28
+  Time: 오후 7:37
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -21,16 +21,15 @@
     <link href="./css/header.css" rel="stylesheet" />
     <link href="./css/TTF.css" rel="stylesheet" />
     <link href="./css/main-body.css" rel="stylesheet" />
-    <title>환전</title>
+    <title>계좌</title>
 </head>
 <body>
 <div class="main-container">
     <%@ include file="/WEB-INF/views/includes/header.jsp" %>
     <div class="main-area">
-    <%@ include file="/WEB-INF/views/includes/navbar.jsp" %>
+        <%@ include file="/WEB-INF/views/includes/navbar.jsp" %>
 
         <div class="main-body">
-            안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세
         </div>
     </div>
 
