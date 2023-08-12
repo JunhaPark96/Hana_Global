@@ -28,8 +28,13 @@ public class MainController {
         return "transfer";
     }
     @GetMapping("/signUp")
-    public String singUp(){
+    public String signUp(){
         System.out.println("signUp 페이지");
         return "signUp";
+    }
+    @GetMapping("/signUp_STEP1")
+    public String signUp1(){
+        System.out.println("signUp step1 페이지");
+        return "signUp_STEP1";
     }
 }

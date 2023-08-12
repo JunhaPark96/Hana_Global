@@ -130,7 +130,7 @@
         <div class="btn-area mt10">
             <span class=" btn-pack btn-type-3c ui-btn-pack-a ui-set-btn-pack ui-set-btn-pack-event">
 <%--                TODO: 링크 경로 바꾸기--%>
-                <a href="/pot/Dream?withyou=CQMEM0014&amp;__STEP=1" class="">신규회원가입 바로가기</a></span>
+                <a href="/signUp_STEP1" class="">신규회원가입 바로가기</a></span>
         </div>
 
     </div>
