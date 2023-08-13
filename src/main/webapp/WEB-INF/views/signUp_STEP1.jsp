@@ -67,23 +67,25 @@
 	</span>
             </div>
 
-            <form name="frm" id="frm" method="post" action="/pot/Dream?withyou=CQMEM0014&amp;__STEP=2">
+            <form name="frm" id="frm" method="post" action="/signUp_STEP2">
                 <input type="hidden" name="dummy">
                 <input type="hidden" id="agreeYN" name="agreeYN" value="">
                 <div class="btn-area mt15 mb30">
-                    <span class=" btn-pack btn-type-3c ui-btn-pack-button ui-set-btn-pack ui-set-btn-pack-event"><button
-                            type="button" class="" id="buttonConfirm"
-                            onclick="chkAgree(); return false;">확인</button></span>
-                    <span class=" btn-pack btn-type-3 ui-btn-pack-a ui-set-btn-pack ui-set-btn-pack-event"><a
-                            href="/pot/Dream?withyou=CQMEM0014" id="buttonCancel" class="">취소</a></span>
+                    <span class=" btn-pack btn-type-3c ui-btn-pack-button ui-set-btn-pack ui-set-btn-pack-event">
+                        <button
+                            type="submit" class="" id="buttonConfirm"
+                            onclick="return chkAgree();">확인
+                        </button>
+                    </span>
+                    <span class=" btn-pack btn-type-3 ui-btn-pack-a ui-set-btn-pack ui-set-btn-pack-event">
+                        <a href="/signUp" id="buttonCancel" class="">취소</a></span>
                 </div>
-                <input type="hidden" name="transkey_i" id="transkey_i" value="0"><input type="hidden"
-                                                                                        name="transkey_inputs"
-                                                                                        id="transkey_inputs"
-                                                                                        value=""><input type="hidden"
-                                                                                                        name="transkeyUuid"
-                                                                                                        id="transkeyUuid"
-                                                                                                        value="undefined">
+                <input type="hidden" name="transkey_i" id="transkey_i" value="0">
+                <input type="hidden"
+                       name="transkey_inputs"
+                       id="transkey_inputs"
+                       value="">
+                <input type="hidden" name="transkeyUuid" id="transkeyUuid" value="undefined">
             </form>
 
         </div>
@@ -111,5 +113,25 @@
     })
 
 </script>
+<script>
+    function chkAgree() {
+        let agreeBox = document.getElementById('p6');
+        let agreeInput = document.getElementById('agreeYN');
+
+        if (agreeBox.checked) {
+            agreeInput.value = "Y";
+            return true;
+        } else {
+            let confirmResult = confirm('약관 내용을 확인하고 모두 동의하십니까?');
+            if (confirmResult) {
+                agreeInput.value = "Y";
+                return true;
+            } else {
+                return false; // Form submission is cancelled.
+            }
+        }
+    }
+</script>
+
 </body>
 </html>

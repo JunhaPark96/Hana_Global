@@ -10,6 +10,7 @@
 }
 .fleft {
     float: left !important;
+    font-size: 20px;
 }
 .title-area {
     clear: both;
@@ -28,7 +29,7 @@
 h3 {
     color: #008080;
     position: relative;
-    font-size: 20px;
+    font-size: 23px;
     line-height: 27px;
     vertical-align: middle;
     height: 23px;
@@ -42,7 +43,7 @@ h3 {
     height: 250px;
     overflow: auto;
     overflow-x: hidden;
-    font-size: 15px;
+    font-size: 18px;
     border: 1px groove gray;
     margin-top: 5px;
     margin-bottom: 15px;
@@ -54,6 +55,8 @@ h3 {
     padding: 0 0 15px;
     text-align: left;
 }
+
+/* 약관 동의 체크 박스*/
 
 /* 확인 & 취소 */
 .btn-area {
@@ -68,45 +71,55 @@ h3 {
 .mt15 {
     margin-top: 25px;
 }
+/* 버튼 공통 */
 .btn-pack, .btn-pack * {
     display: inline-block;
     overflow: visible;
     margin: 0;
-    padding: 0;
     /*background: url(/img/common/etc/bg_btn/common.gif) no-repeat;*/
     white-space: nowrap;
     text-align: center;
     border: none;
     background-color: transparent;
     cursor: pointer;
-    _cursor: pointer;
 }
-.btn-pack.btn-type-3c {
-    background-position: left -131px;
+/* 확인 버튼 span */
+.btn-pack.btn-type-3c{
     height: 34px;
-    color: #fff;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 34px;
     vertical-align: middle;
     margin-left: 2px;
     margin-right: 2px;
+    background-color: #018085;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white; !important;
 }
-.btn-pack.ui-set-btn-pack {
-    visibility: inherit;
+.btn-pack.btn-type-3c button{
+    color: white; !important;
 }
+/* 취소 버튼 span */
+.btn-pack.btn-type-3{
+    height: 34px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 34px;
+    vertical-align: middle;
+}
+/* 버튼 간격 */
 .btn-pack.btn-type-3c button, .btn-pack.btn-type-3c input {
-    min-width: 93px;
+    min-width: 100px;
 }
-.btn-pack.btn-type-3c {
-    padding: 0 17px 0px 13px;
-    min-width: 63px;
-    background-position: right -131px;
+/* 하이퍼링크 스타일 삭제 */
+.btn-pack.btn-type-3c a{
+    text-decoration: none;
+    color: #ffffff;
 }
-.btn-pack button {
-    text-decoration: none !important;
-}
+
 .btn-pack.btn-type-3 a {
     min-width: 63px;
-    text-decoration: none
+    text-decoration: none;
+    color: #000;
 }
