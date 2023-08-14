@@ -71,13 +71,13 @@
   const stepButtons = document.querySelectorAll('.step-button');
 
   // URL에서 현재 단계를 추출
-  const currentStep = parseInt(location.pathname.split("signUp_STEP")[1]);
+  const currentStep = parseInt(location.pathname.split("signUp_STEP")[1] - 1);
 
   // 진행률을 설정합니다. (예: 2단계면 2/5 * 100 = 40%)
-  progress.setAttribute('value', currentStep * 100 / stepButtons.length);
+  progress.setAttribute('value', currentStep * 100 / (stepButtons.length - 1));
 
   // 현재 단계까지의 버튼에 'done' 클래스를 추가합니다.
-  for (let i = 0; i < currentStep; i++) {
+  for (let i = 0; i <= currentStep; i++) {
     stepButtons[i].classList.add('done');
   }
 </script>

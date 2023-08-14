@@ -93,27 +93,29 @@
 
 </div>
 
+<%--<script>--%>
+<%--    const progress = document.querySelector('#progress');--%>
+<%--    const stepButtons = document.querySelectorAll('.step-button');--%>
+
+<%--    Array.from(stepButtons).forEach((button, index) => {--%>
+<%--        button.addEventListener('click', () => {--%>
+<%--            progress.setAttribute('value', index * 100 / (stepButtons.length - 1)); // 5단계로 확장--%>
+
+<%--            stepButtons.forEach((item, secindex) => {--%>
+<%--                if (index >= secindex) {--%>
+<%--                    item.classList.add('done');--%>
+<%--                }--%>
+<%--                if (index < secindex) {--%>
+<%--                    item.classList.remove('done');--%>
+<%--                }--%>
+<%--            })--%>
+<%--        })--%>
+<%--    })--%>
+
+<%--</script>--%>
+
 <script>
-    const stepButtons = document.querySelectorAll('.step-button');
-    const progress = document.querySelector('#progress');
-
-    Array.from(stepButtons).forEach((button, index) => {
-        button.addEventListener('click', () => {
-            progress.setAttribute('value', index * 100 / (stepButtons.length - 1)); // 5단계로 확장
-
-            stepButtons.forEach((item, secindex) => {
-                if (index >= secindex) {
-                    item.classList.add('done');
-                }
-                if (index < secindex) {
-                    item.classList.remove('done');
-                }
-            })
-        })
-    })
-
-</script>
-<script>
+<%--    약관 체크--%>
     function chkAgree() {
         let agreeBox = document.getElementById('p6');
         let agreeInput = document.getElementById('agreeYN');
