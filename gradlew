@@ -32,10 +32,10 @@
 #       Busybox and similar reduced shells will NOT work, because this script
 #       requires all of these POSIX shell features:
 #         * functions;
-#         * expansions «$var», «${var}», «${var:-default}», «${var+SET}»,
-#           «${var#prefix}», «${var%suffix}», and «$( cmd )»;
+#         * expansions «$let», «${let}», «${let:-default}», «${let+SET}»,
+#           «${let#prefix}», «${let%suffix}», and «$( cmd )»;
 #         * compound commands having a testable exit status, especially «case»;
-#         * various built-in commands including «command», «set», and «ulimit».
+#         * letious built-in commands including «command», «set», and «ulimit».
 #
 #   Important for patching:
 #
@@ -47,7 +47,7 @@
 #       problems, so this is (mostly) avoided, by progressively accumulating
 #       options in "$@", and eventually passing that to Java.
 #
-#       Where the inherited environment variables (DEFAULT_JVM_OPTS, JAVA_OPTS,
+#       Where the inherited environment letiables (DEFAULT_JVM_OPTS, JAVA_OPTS,
 #       and GRADLE_OPTS) rely on word-splitting, this is performed explicitly;
 #       see the in-line comments for details.
 #
@@ -125,7 +125,7 @@ if [ -n "$JAVA_HOME" ] ; then
     if [ ! -x "$JAVACMD" ] ; then
         die "ERROR: JAVA_HOME is set to an invalid directory: $JAVA_HOME
 
-Please set the JAVA_HOME variable in your environment to match the
+Please set the JAVA_HOME letiable in your environment to match the
 location of your Java installation."
     fi
 else
@@ -134,7 +134,7 @@ else
     then
         die "ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
 
-Please set the JAVA_HOME variable in your environment to match the
+Please set the JAVA_HOME letiable in your environment to match the
 location of your Java installation."
     fi
 fi
@@ -164,7 +164,7 @@ fi
 #   * -classpath
 #   * -D...appname settings
 #   * --module-path (only if needed)
-#   * DEFAULT_JVM_OPTS, JAVA_OPTS, and GRADLE_OPTS environment variables.
+#   * DEFAULT_JVM_OPTS, JAVA_OPTS, and GRADLE_OPTS environment letiables.
 
 # For Cygwin or MSYS, switch paths to Windows format before running java
 if "$cygwin" || "$msys" ; then
@@ -203,7 +203,7 @@ DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
 
 # Collect all arguments for the java command;
 #   * $DEFAULT_JVM_OPTS, $JAVA_OPTS, and $GRADLE_OPTS can contain fragments of
-#     shell script including quotes and variable substitutions, so put them in
+#     shell script including quotes and letiable substitutions, so put them in
 #     double quotes to make sure that they get re-expanded; and
 #   * put everything else in single quotes, so that it's not re-expanded.
 
@@ -225,7 +225,7 @@ fi
 #
 # In Bash we could simply go:
 #
-#   readarray ARGS < <( xargs -n1 <<<"$var" ) &&
+#   readarray ARGS < <( xargs -n1 <<<"$let" ) &&
 #   set -- "${ARGS[@]}" "$@"
 #
 # but POSIX shell has neither arrays nor command substitution, so instead we
@@ -234,7 +234,7 @@ fi
 # that process (while maintaining the separation between arguments), and wrap
 # the whole thing up as a single "set" statement.
 #
-# This will of course break if any of these variables contains a newline or
+# This will of course break if any of these letiables contains a newline or
 # an unmatched quote.
 #
 

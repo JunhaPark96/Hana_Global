@@ -31,7 +31,7 @@
             $('#btnNext').on('click', function(event) {
                 event.preventDefault(); // 기본 submit 동작을 방지
 
-                var formData = new FormData($('#frm')[0]); // Form 데이터를 가져옵니다.
+                let formData = new FormData($('#frm')[0]); // Form 데이터를 가져옵니다.
 
                 $.ajax({
                     url: '/signUp_STEP3',
@@ -41,7 +41,7 @@
                     contentType: false,  // 이 설정을 false로 지정하여 jQuery가 contentType을 설정하는 것을 방지
                     success: function(response) {
                         // 응답이 성공적인 경우 처리 (예: 다음 페이지로 리디렉션)
-                        window.location.href = '/nextPageURL';  // 다음 페이지로 리디렉션. URL을 필요에 따라 수정하세요.
+                        window.location.href = '/signUp_STEP3';  // 다음 페이지로 리디렉션. URL을 필요에 따라 수정하세요.
                     },
                     error: function(xhr, status, error) {
                         // 오류 발생시 처리
@@ -62,40 +62,7 @@
         <%@ include file="/WEB-INF/views/includes/stepper.jsp" %>
         <div class="content">
             <%--    1002962104821--%>
-                <form id="frm" name="db519c6d072ca8838" action="/signUp_STEP3" method="post" enctype="multipart/form-data">
-                    <section>
-                        <div class="titArea">
-                            <h2 class="titH3">신청인 정보</h2>
-                            <p class="desc">신청인 정보를 입력해주세요.<span id="fmTxt1" style="display:none;"> 가족카드 발급 시 본인회원 정보를 입력해주세요.</span> <a href="#" class="links" id="applicantInfoPop">유의사항</a></p>
-                        </div>
-
-                        <table class="tableY formTbl">
-                            <colgroup>
-                                <col style="width:185px">
-                                <col style="width:auto">
-                            </colgroup>
-                            <tbody>
-                            <tr>
-                                <td class="th">성명</td>
-                                <td>
-                                    <div class="iptWrap">
-                                        <input type="text" class="ipt uiAct" title="성명 입력" id="crtSmsCstNm" name="crtSmsCstNm">
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="th">외국인등록번호</td>
-                                <td>
-                                    <div class="iptWrap">
-                                        <input type="text" class="ipt uiAct" placeholder="예) 123456-1234567" title="주민등록번호 입력" id="crtSmsPsNo" name="crtSmsPsNo">
-                                    </div>
-                                    <p class="fieldMsg error" id="psno_msg" style="display:none"></p>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </section>
-
+                <form id="frm" name="step2-form" action="/signUp_STEP3" method="post" enctype="multipart/form-data">
                     <section>
                         <div class="titArea">
                             <h2 class="titH3">신분증 정보</h2>
@@ -116,6 +83,11 @@
                                                 <input type="tel" class="ipt uiAct" maxlength="8" placeholder="'20200101'과 같이 숫자만 입력해주세요." title="주민등록증 발급일자 숫자만 입력해주세요." id="pressIsuDy8" value="" name="pressIsuDy8">
                                             </div>
                                             <span class="txt">주민등록증 하단의 발급일자를 입력해주세요.</span>
+                                            <div class="uploadField">
+                                                <label for="idCardImage">신분증 이미지 업로드:</label>
+                                                <input type="file" id="idCardImage" name="idCardImage" accept="image/*">
+                                                <span class="txt">신분증 이미지를 업로드해주세요.</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </td>
@@ -142,6 +114,12 @@
                                         <input type="text" class="ipt uiAct" placeholder="비자 번호를 입력해주세요." title="비자 번호 입력" id="visaNumber" name="visaNumber">
                                     </div>
                                     <span class="txt">유효한 비자 번호를 입력해주세요.</span>
+
+                                    <div class="uploadField">
+                                        <label for="visaImage">비자 이미지 업로드:</label>
+                                        <input type="file" id="visaImage" name="visaImage" accept="image/*">
+                                        <span class="txt">비자 이미지를 업로드해주세요.</span>
+                                    </div>
                                 </td>
                             </tr>
                             </tbody>
@@ -166,38 +144,16 @@
                                         <input type="text" class="ipt uiAct" placeholder="여권 번호를 입력해주세요." title="여권 번호 입력" id="passportNumber" name="passportNumber">
                                     </div>
                                     <span class="txt">유효한 여권 번호를 입력해주세요.</span>
+
+                                    <div class="uploadField">
+                                        <label for="passportImage">여권 이미지 업로드:</label>
+                                        <input type="file" id="passportImage" name="passportImage" accept="image/*">
+                                        <span class="txt">여권 이미지를 업로드해주세요.</span>
+                                    </div>
                                 </td>
                             </tr>
                             </tbody>
                         </table>
-                    </section>
-
-                    <section>
-                        <div class="titArea">
-                            <h2 class="titH3">이미지 업로드</h2>
-                        </div>
-                        <div class="uploadArea">
-                            <!-- 신분증 이미지 업로드 -->
-                            <div class="uploadField">
-                                <label for="idCardImage">신분증 이미지 업로드:</label>
-                                <input type="file" id="idCardImage" name="idCardImage" accept="image/*">
-                                <span class="txt">신분증 이미지를 업로드해주세요.</span>
-                            </div>
-
-                            <!-- 비자 이미지 업로드 -->
-                            <div class="uploadField">
-                                <label for="visaImage">비자 이미지 업로드:</label>
-                                <input type="file" id="visaImage" name="visaImage" accept="image/*">
-                                <span class="txt">비자 이미지를 업로드해주세요.</span>
-                            </div>
-
-                            <!-- 여권 이미지 업로드 -->
-                            <div class="uploadField">
-                                <label for="passportImage">여권 이미지 업로드:</label>
-                                <input type="file" id="passportImage" name="passportImage" accept="image/*">
-                                <span class="txt">여권 이미지를 업로드해주세요.</span>
-                            </div>
-                        </div>
                     </section>
 
                     <section class="certContain">
