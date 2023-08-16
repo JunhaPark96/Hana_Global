@@ -158,7 +158,7 @@
 
                     <section class="certContain">
                         <div class="btnArea" id="btnFclArea">
-                            <a href="/signUp" id="btnCancel" class="btn_s">취소</a>
+                            <a href="/signUp_STEP1" id="btnCancel" class="btn_s">취소</a>
                             <button type="submit" id="btnNext" class="btn_p">다음</button>
                         </div>
                     </section>

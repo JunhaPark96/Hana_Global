@@ -60,8 +60,8 @@
                             <td class="th">성명</td>
                             <td>
                                 <div class="iptWrap">
-                                    <input type="text" class="ipt uiAct" title="성명 입력" id="crtSmsCstNm"
-                                           name="crtSmsCstNm">
+                                    <input type="text" class="ipt uiAct" title="성명 입력" id="userName"
+                                           name="userName">
                                 </div>
                             </td>
                         </tr>
@@ -70,7 +70,7 @@
                             <td>
                                 <div class="iptWrap">
                                     <input type="text" class="ipt uiAct" placeholder="예) 123456-1234567"
-                                           title="주민등록번호 입력" id="crtSmsPsNo" name="crtSmsPsNo">
+                                           title="주민등록번호 입력" id="registerNo" name="registerNo">
                                 </div>
                                 <p class="fieldMsg error" id="psno_msg" style="display:none"></p>
                             </td>
@@ -109,7 +109,6 @@
                             </td>
                         </tr>
                         <!-- 성별 -->
-                        <!-- 성별 -->
                         <tr>
                             <td class="th">성별</td>
                             <td>
@@ -122,6 +121,25 @@
                             </td>
                         </tr>
 
+<%--                        TODO: 시간되면 휴대폰 인증 따로 빼기--%>
+                        <tr>
+                            <td class="th">휴대폰 번호</td>
+<%--                            <th scope="row"><label for="mobile01">휴대폰 번호</label><em>*</em></th>--%>
+                            <td>
+                                <div class="iptWrap setPhone">
+                                    <select class="ipt notDel uiAct" title="휴대폰 앞 3자리 선택" id="mobile01" name="mobilePrefix">
+                                        <option value="010">010</option>
+                                        <option value="011">011</option>
+                                        <option value="016">016</option>
+                                        <option value="017">017</option>
+                                        <option value="018">018</option>
+                                        <option value="019">019</option>
+                                    </select> -
+                                <input type="text" id="mobileSuffix" name="mobileSuffix" class="ipt notDel uiAct" maxlength="8" title="휴대전화 국번 입력">
+                                </div>
+                            </td>
+                        </tr>
+
                         <%--이메일--%>
                         <tr>
                             <td class="th"><b>주소</b></td>
@@ -129,18 +147,23 @@
                                 <div class="iptWrap">
                                     <input type="text" class="ipt uiAct" id="sample4_postcode" name="sample4_postcode"
                                            placeholder="우편번호">
-                                    <button class="valiButton" onclick="sample4_execDaumPostcode(event)">우편번호 찾기</button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                    </svg>
+
+
+                                    <button class="valiButton"  onclick="sample4_execDaumPostcode(event)">우편번호 찾기</button>
                                     <br>
-                                    <input type="text" class="ipt uiAct" id="sample4_roadAddress"
+                                    <input type="text" class="ipt uiAct" id="roadAddress"
                                            name="sample4_roadAddress"
                                            placeholder="도로명주소"><br>
-                                    <input type="text" class="ipt uiAct" id="sample4_jibunAddress"
+                                    <input type="text" class="ipt uiAct" id="jibunAddress"
                                            name="sample4_jibunAddress"
                                            placeholder="지번주소"><br>
-                                    <input type="text" class="ipt uiAct" id="sample4_detailAddress"
+                                    <input type="text" class="ipt uiAct" id="detailAddress"
                                            name="sample4_detailAddress"
                                            placeholder="상세주소"><br>
-                                    <input type="text" class="ipt uiAct" id="sample4_extraAddress" name="sample4_extraAddress" placeholder="참고항목">
+                                    <input type="text" class="ipt uiAct" id="extraAddress" name="extraAddress" placeholder="참고항목">
                                 </div>
                             </td>
                         </tr>

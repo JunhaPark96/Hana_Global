@@ -1,3 +1,4 @@
+// 카카오 주소 찾기 API
 function sample4_execDaumPostcode(event) {
     event.preventDefault();
     new daum.Postcode(
@@ -21,14 +22,14 @@ function sample4_execDaumPostcode(event) {
                     extraRoadAddr = ' (' + extraRoadAddr + ')';
                 }
 
-                document.getElementById('sample4_postcode').value = data.zonecode;
-                document.getElementById('sample4_roadAddress').value = roadAddr;
-                document.getElementById('sample4_jibunAddress').value = data.jibunAddress;
+                document.getElementById('postcode').value = data.zonecode;
+                document.getElementById('roadAddress').value = roadAddr;
+                document.getElementById('jibunAddress').value = data.jibunAddress;
 
                 if (roadAddr !== '') {
-                    document.getElementById('sample4_extraAddress').value = extraRoadAddr;
+                    document.getElementById('extraAddress').value = extraRoadAddr;
                 } else {
-                    document.getElementById('sample4_extraAddress').value = '';
+                    document.getElementById('extraAddress').value = '';
                 }
 
                 let guideTextBox = document.getElementById('guide');

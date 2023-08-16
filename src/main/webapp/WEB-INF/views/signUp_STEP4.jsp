@@ -14,6 +14,7 @@
   <!-- Stepper Styles -->
   <link rel="stylesheet" href="./css/step-box.css">
   <link rel="stylesheet" href="./css/terms.css">
+  <link rel="stylesheet" href="./css/step3.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
           crossorigin="anonymous"></script>
@@ -33,94 +34,102 @@
     <%@ include file="/WEB-INF/views/includes/stepper.jsp" %>
     <div class="content">
       <%--    1002962104821--%>
-      <form name="frm" action="/pib/Dream?withyou=CQMEM0029&amp;__STEP=3" method="post" id="frm"><div class="nppfs-elements"></div>
-        <fieldset>
-          <div id="divAcct3">
-            <legend>고객정보 변경을 위한 기본 정보 입력</legend>
-
+      <form name="frm" action="/signUp_STEP5" method="post" id="frm">
+        <section>
+          <div class="titArea">
+            <h2>로그인 정보 입력</h2>
+<%--            <h3 class="titH3">신청인 정보</h3>--%>
             <div class="title-area clearfix">
-              <h3 class="fleft">고객정보</h3>
+              <h3 class="fleft">이메일 패스워드</h3>
               <div class="infor mt4">
-                <span class="asterisk">필수입력항목</span> 표시가 있는 항목은 필수 입력사항입니다.
+                <span class="asterisk">필수입력항목 표시가 있는 항목은 필수 입력사항입니다.</span>
               </div>
             </div>
-
-            <table class="tbl-type mb30 ui-set-tbl-type" summary="자택주소, 직장주소, 직장명, 부서명, 직위, E-mail, E-mail수신여부필수입력항목 제공">
-              <caption>고객정보 입력</caption>
-              <colgroup>
-                <col width="150">
-                <col>
-                <col width="150">
-                <col>
-              </colgroup>
-              <tbody>
-              <tr>
-                <th scope="row"><label for="addr1">자택주소</label><span class="asterisk">필수입력항목</span></th>
-                <td colspan="3">
-							<span class="i-br mb2">
-								<select name="haddr_nm" id="haddr_nm" disabled="disabled" class="disabled" style="width: 90px;" title="지번주소/도로명주소 구분명" selected="selected">
-									<option value="01">지번주소</option>
-									<option value="02">도로명주소</option>
-								</select>
-								<input type="text" name="zip" id="zip" maxlength="6" value="16708" notnull="true" colname="우편번호" readonly="readonly" style="width: 52px; background-color: rgb(232, 242, 253);" title="우편번호 전체 입력" enc="off">
-								<span class=" btn-pack btn-type-2 ui-btn-pack-a ui-set-btn-pack ui-set-btn-pack-event"><a href="#none" onclick="openAddressWizardPop('H');return false;" class="">주소 찾기</a></span>
-							</span>
-                  <input type="text" name="addr1" id="addr1" value="경기 수원시 영통구 영통로 498" mask="use" colname="자택주소" notnull="true" readonly="readonly" style="width: 447px; background-color: rgb(232, 242, 253);" title="기본주소 입력" enc="off"> <span class="ml20 i-opt">기본주소</span><br>
-                  <input type="text" name="addr2" id="addr2" value="128 2004" mask="use" colname="자택상세주소" style="width: 447px;" title="상세주소 입력" maxlength="50" enc="off"> <span class="ml20 i-opt">상세주소</span><br>
-                  <input type="text" name="OWHM_HDOF_RITM_TXT" id="OWHM_HDOF_RITM_TXT" value="(영통동, 황골마을주공1단지아파트)" mask="use" readonly="readonly" colname="자택주소" style="width: 447px;" title="우편동명/건물명 입력" enc="off"> <span id="OWHM_HDOF_RITM_TXT_span" class="ml20 i-opt">우편동명/건물명</span>
-                  <input type="hidden" name="OWHM_HDOF_ADR_KDCD" id="OWHM_HDOF_ADR_KDCD" value="2">
-                  <input type="hidden" name="OWHM_HDOF_POST_SRNO" id="OWHM_HDOF_POST_SRNO" value="002">
-                  <input type="hidden" name="OWHM_HDOF_BLD_MNG_NO" id="OWHM_HDOF_BLD_MNG_NO" value="4111710500109550001001342">
-                  <input type="hidden" name="OWHM_HDOF_STDO_NO" id="OWHM_HDOF_STDO_NO" value="4111710500">
-                </td>
-              </tr>
-
-              <tr>
-                <th scope="row"><label for="email1">E-mail</label><span class="asterisk">필수입력항목</span></th>
-                <td colspan="3">
-                  <input type="text" id="email1" name="email1" value="201904313" colname="E-mail" datatype="AN" maxlength="30" mask="-  */_.," title="E-mail 아이디 입력" style="width: 142px;" enc="off"> @
-                  <input type="text" id="email2" name="email2" value="hufs.ac.kr" datatype="AN" mask="-  */_.," maxlength="30" title="E-mail 포탈주소 자동입력" style="width: 142px;" enc="off">
-                  <select id="emailname" name="emailname" onchange="setEmailDomainInput()" title="E-mail 주소 선택" style="width: 131px;">
-                    <option value="00">직접입력</option>
-                    <option value="23">G메일</option>
-                    <option value="16">네이버</option>
-                    <option value="17">네이트</option>
-                    <option value="22">다음</option>
-                    <option value="09">드림위즈</option>
-                    <option value="05">라이코스</option>
-                    <option value="02">야후</option>
-                    <option value="21">엠팔</option>
-                    <option value="06">코리아닷컴</option>
-                    <option value="19">파란닷컴</option>
-                    <option value="08">프리챌</option>
-                    <option value="14">하이텔</option>
-                    <option value="01">한메일</option>
-                    <option value="03">한미르</option>
-                    <option value="07">핫메일</option>
-
-                    <option value="100">===========</option>
-                    <option value="100">이메일 없음</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">E-mail수신여부<span class="asterisk">필수입력항목</span></th>
-                <td colspan="3">
-                  <input type="radio" id="MAIL_YN_GB0" name="MAIL_YN_GB" value="0"> <label for="MAIL_YN_GB0">수신</label>
-                  <input type="radio" id="MAIL_YN_GB1" name="MAIL_YN_GB" value="1"> <label for="MAIL_YN_GB1">수신거부</label>
-                  <span class="i-dsc">(메일수신거부 등록전에 대상자로 선정된 메일은 발송될 수 있습니다.)</span>
-                </td>
-              </tr>
-              </tbody>
-            </table>
           </div>
-        </fieldset>
-        <input type="hidden" name="transkey_i" id="transkey_i" value="0"><input type="hidden" name="transkey_inputs" id="transkey_inputs" value=""><input type="hidden" name="transkeyUuid" id="transkeyUuid" value="undefined">
+
+          <table class="tableY formTbl">
+            <colgroup>
+              <col style="width:185px">
+              <col style="width:auto">
+            </colgroup>
+            <tbody>
+            <tr>
+              <td class="th">이메일</td>
+              <td>
+                <div class="iptWrap">
+                  <input type="email" class="ipt uiAct" title="이메일 입력" id="email"
+                         name="email" placeholder="hanaGlobal@gmail.com">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="th">비밀번호</td>
+              <td>
+                <div class="iptWrap">
+                  <input type="password" class="ipt uiAct"
+                         title="비밀번호 입력" id="userPasswd" name="userPasswd">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="th">비밀번호 확인</td>
+              <td>
+                <div class="iptWrap">
+                  <input type="password" class="ipt uiAct"
+                         title="비밀번호 입력" id="userPasswdConfirm" name="userPasswdConfirm">
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="account-password-section">
+          <div class="titArea">
+            <h2>계좌 비밀번호 설정</h2>
+<%--            <h3 class="titH3">신청인 정보</h3>--%>
+            <div class="title-area clearfix">
+              <h3 class="fleft">계좌 정보</h3>
+              <div class="infor mt4">
+                <span class="asterisk">필수입력항목 표시가 있는 항목은 필수 입력사항입니다.</span>
+              </div>
+            </div>
+          </div>
+
+          <table class="tableY formTbl">
+            <colgroup>
+              <col style="width:185px">
+              <col style="width:auto">
+            </colgroup>
+            <tbody>
+            <tr>
+              <td class="th">계좌 비밀번호</td>
+              <td>
+                <div class="iptWrap">
+                  <input type="text" class="ipt uiAct" title="계좌비밀번호 설정" id="acPasswd"
+                         name="acPasswd" maxlength="4">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="th">비밀번호 확인</td>
+              <td>
+                <div class="iptWrap" >
+                  <input type="text" class="ipt uiAct" title="국적 입력" id="acPasswdConfirm"
+                         name="acPasswdConfirm" maxlength="4">
+                </div>
+              </td>
+            </tr>
+
+            </tbody>
+          </table>
+        </section>
+        <section class="certContain">
+          <div class="btnArea" id="btnFclArea">
+            <a href="/signUp_STEP2" id="btnCancel" class="btn_s">이전</a>
+            <button type="submit" id="btnNext" class="btn_p">다음</button>
+          </div>
+        </section>
       </form>
-      <div class="btn-area mt20" id="OK">
-        <span class=" btn-pack btn-type-3c ui-btn-pack-a ui-set-btn-pack ui-set-btn-pack-event"><a href="#none" onclick="doSubmit();return false;" id="confirmBtn" class="">확인</a></span>
-        <span class=" btn-pack btn-type-3 ui-btn-pack-a ui-set-btn-pack ui-set-btn-pack-event"><a href="/pib/Dream?withyou=CQMEM0029" class="" id="cancelBtn">취소</a></span>
-      </div>
     </div>
   </main>
 

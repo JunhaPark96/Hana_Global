@@ -21,6 +21,7 @@
         <div class="signin">Signin</div>
         <div class="signup">Signup</div>
         <% } else { %>
+        <div class="signin">MyProfile</div>
         <div class="signup">SignOut</div>
         <% } %>
     </div>
