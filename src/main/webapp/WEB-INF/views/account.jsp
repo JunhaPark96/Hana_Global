@@ -16,7 +16,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
-    <link href="./css/main.css" rel="stylesheet" />
+    <link href="./css/service-main.css" rel="stylesheet" />
     <link href="./css/nav.css" rel="stylesheet" />
     <link href="./css/header.css" rel="stylesheet" />
     <link href="./css/TTF.css" rel="stylesheet" />
