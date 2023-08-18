@@ -27,6 +27,7 @@
     <link href="./css/TTF.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <title>본인 확인</title>
+
 </head>
 <body>
 <div class="main-container">
@@ -115,8 +116,8 @@
                                 <div class="iptWrap">
                                     <!-- 숨겨진 입력 필드 추가 -->
                                     <input type="hidden" name="gender" id="gender" value="">
-                                    <button type="button" id="maleBtn" class="genderBtn" onclick="selectGender('male')">남성</button>
-                                    <button type="button" id="femaleBtn" class="genderBtn" onclick="selectGender('female')">여성</button>
+                                    <button type="button" id="maleBtn" class="genderBtn" onclick="selectGender('male')">M</button>
+                                    <button type="button" id="femaleBtn" class="genderBtn" onclick="selectGender('female')">F</button>
                                 </div>
                             </td>
                         </tr>
@@ -145,7 +146,7 @@
                             <td class="th"><b>주소</b></td>
                             <td>
                                 <div class="iptWrap">
-                                    <input type="text" class="ipt uiAct" id="sample4_postcode" name="sample4_postcode"
+                                    <input type="text" class="ipt uiAct" id="postcode" name="sample4_postcode"
                                            placeholder="우편번호">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
@@ -155,13 +156,13 @@
                                     <button class="valiButton"  onclick="sample4_execDaumPostcode(event)">우편번호 찾기</button>
                                     <br>
                                     <input type="text" class="ipt uiAct" id="roadAddress"
-                                           name="sample4_roadAddress"
+                                           name="roadAddress"
                                            placeholder="도로명주소"><br>
                                     <input type="text" class="ipt uiAct" id="jibunAddress"
-                                           name="sample4_jibunAddress"
+                                           name="jibunAddress"
                                            placeholder="지번주소"><br>
                                     <input type="text" class="ipt uiAct" id="detailAddress"
-                                           name="sample4_detailAddress"
+                                           name="detailAddress"
                                            placeholder="상세주소"><br>
                                     <input type="text" class="ipt uiAct" id="extraAddress" name="extraAddress" placeholder="참고항목">
                                 </div>

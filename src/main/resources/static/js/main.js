@@ -1,4 +1,4 @@
-// 카카오 주소 찾기 API
+// 다음 주소 찾기 API
 function sample4_execDaumPostcode(event) {
     event.preventDefault();
     new daum.Postcode(
