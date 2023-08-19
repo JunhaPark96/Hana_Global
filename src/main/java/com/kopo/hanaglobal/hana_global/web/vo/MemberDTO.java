@@ -1,4 +1,4 @@
-package com.kopo.hanaglobal.hana_global.web.dto;
+package com.kopo.hanaglobal.hana_global.web.vo;
 
 import lombok.*;
 

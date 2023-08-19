@@ -25,8 +25,13 @@ public class MainController {
 
     @GetMapping("/account")
     public String account() {
-        System.out.println("acount 페이지");
+        System.out.println("account 페이지");
         return "account";
+    }
+    @GetMapping("/myAccount")
+    public String myAccount() {
+        System.out.println("myAccount 페이지");
+        return "myAccount";
     }
 
     @GetMapping("/transfer")

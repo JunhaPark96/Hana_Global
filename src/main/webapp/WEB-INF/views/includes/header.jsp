@@ -1,4 +1,4 @@
-<%@ page import="com.kopo.hanaglobal.hana_global.web.dto.MemberDTO" %>
+<%@ page import="com.kopo.hanaglobal.hana_global.web.vo.MemberDTO" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">

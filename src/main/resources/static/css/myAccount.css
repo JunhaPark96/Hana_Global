@@ -1,0 +1,76 @@
+.carousel{
+}
+.carousel-item{
+
+}
+/* main-body 아래의 내용을 상하로 가운데 정렬 */
+.main-body {
+    display: grid;
+    align-content: center;
+}
+
+.justify-content-center{
+    margin-right: 5%;
+    min-width: 700px;
+    min-height: 500px;
+    margin-right: 0;
+    margin-left: 0;
+}
+/*왼블럭*/
+.col-md-4{
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    max-width: 150px;
+    background: linear-gradient(60deg, #67E6A2, #46E4D1);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+/*오른쪽블럭*/
+.col-md-8{
+    border: 1px solid gray;
+    border-radius: 20px;
+    /*box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);*/
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pt-1{
+    /*border: 1px dotted red;*/
+}
+.card-body {
+    margin-top:3%;
+    /*border: 1px solid brown;*/
+    padding: 20px;
+}
+
+/* card 내부 요소들 */
+.card h4,
+.card h5,
+.card p {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.card p {
+    font-size: 18px;
+    color: #666;
+}
+
+/*컨트롤 버튼*/
+.carousel-control-prev,
+.carousel-control-next {
+    margin: 0 -40px; /* 양쪽으로 20px씩 마진을 추가하여 밀어냅니다 */
+    filter: invert(1);
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+}
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    color: #000;
+}

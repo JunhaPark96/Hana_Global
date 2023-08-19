@@ -1,4 +1,4 @@
-<%@ page import="com.kopo.hanaglobal.hana_global.web.dto.MemberDTO" %>
+<%@ page import="com.kopo.hanaglobal.hana_global.web.vo.MemberDTO" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -6,8 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Hana2.0+B&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Hana2.0+H&display=swap" rel="stylesheet" />
 
     <link href="css/header.css" rel="stylesheet" />
     <link href="css/TTF.css" rel="stylesheet" />
