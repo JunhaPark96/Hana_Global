@@ -67,29 +67,32 @@
                                     <hr class="mt-0 mb-4">
 
                                     <div class="row pt-1">
-                                        <div class="col-6 mb-3">
+                                        <div class="col-6">
                                             <h4>예금주명</h4>
-                                            <p class="text-muted" style="font-size:20px">
+                                            <p class="text-muted" style="font-size:22px">
                                                 박준하
                                                 ${account.getAccountName()} </p>
                                         </div>
-                                        <div class="col-6 mb-3">
+                                        <div class="col-6">
                                             <h4>계좌종류</h4>
-                                            주거래 통장
-                                            <p class="text-muted" style="font-size:20px">${account.getAccountType()}</p>
+                                            <p class="text-muted" style="font-size:22px">
+                                                주거래 통장
+                                                ${account.getAccountType()}</p>
                                         </div>
                                     </div>
 
                                     <div class="row pt-1">
-                                        <div class="col-12 mb-1">
+                                        <div class="col-12">
                                             <h4>계좌번호</h4>
-                                            1111-2222-3333-4444
-                                            <p class="text-muted" style="font-size:20px">${account.getAccountNumber()}</p>
+                                            <p class="text-muted" style="font-size:22px">
+                                                1111-2222-3333-4444
+                                                ${account.getAccountNumber()}</p>
                                         </div>
-                                        <div class="col-6 mb-1">
+                                        <div class="col-6">
                                             <h4>잔액</h4>
-                                            10,000,000
-                                            <p class="text-muted" style="font-size:17px">${account.getBalance()}원</p>
+                                            <p class="text-muted" style="font-size:20px">
+                                                10,000,000
+                                                ${account.getBalance()}원</p>
                                         </div>
                                         <div class="col-6 form-check form-switch ps-0 ms-auto my-auto">
 <%--                                            <input style="margin-top:-30px;margin-left: 30px !important;"--%>
@@ -101,15 +104,25 @@
                                     <div class="row pt-1">
                                         <div class="col-6 mb-3">
                                             <h4>계좌개설날짜</h4>
-                                            2023-05-12
-                                            <p class="text-muted" style="font-size:20px">${account.getOpenAccountDate()} </p>
+                                            <p class="text-muted" style="font-size:22px">
+                                                2023-05-12
+                                                ${account.getOpenAccountDate()} </p>
                                         </div>
                                         <div class="col-6 mb-3">
                                             <h4>마지막 거래 날짜</h4>
-                                            2023-08-19
-                                            <p class="text-muted" style="font-size:20px">${account.getLastTransactionDate()}</p>
+                                            <p class="text-muted" style="font-size:22px">
+                                                2023-08-19
+                                                ${account.getLastTransactionDate()}</p>
                                         </div>
                                     </div>
+                                    <hr>
+
+                                    <section class="certContain">
+                                        <div class="btnArea" id="btnFclArea">
+                                            <a href="/account_details" id="btnCancel" class="btn_s">거래 내역</a>
+                                            <a href="/account_transfer" id="btnNext" class="btn_p">계좌 이체</a>
+                                        </div>
+                                    </section>
                                 </div>
                             </div>
                         </div>

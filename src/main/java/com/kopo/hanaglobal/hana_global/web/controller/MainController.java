@@ -33,6 +33,16 @@ public class MainController {
         System.out.println("myAccount 페이지");
         return "myAccount";
     }
+    @GetMapping("/account_details")
+    public String accountDetails() {
+        System.out.println("account_details 페이지");
+        return "account_details";
+    }
+    @GetMapping("/account_transfer")
+    public String accountTransfer() {
+        System.out.println("account_transfer 페이지");
+        return "account_transfer";
+    }
 
     @GetMapping("/transfer")
     public String transfer() {

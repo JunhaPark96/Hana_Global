@@ -100,14 +100,16 @@
     margin-bottom: 0;
 }
 
-
+/*버튼*/
 .btnArea {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-top: 1.5rem;
 }
-
+.btnArea a {
+    text-decoration: none;
+}
 .btn_p {
     background-color: #018085;
     color: #fff;
@@ -119,7 +121,7 @@
 }
 
 .btn_p:hover {
-    background-color: #0056b3;
+    background-color: #016f73;
 }
 .btn_s {
     background-color: #e9ecef;
