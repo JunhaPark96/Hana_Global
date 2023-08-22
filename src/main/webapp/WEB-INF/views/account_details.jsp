@@ -113,10 +113,10 @@
                                 <th scope="row" class="text-center align-middle">&nbsp;&nbsp;잔액</th>
                                 <td>
                                     <div class="btnArea" id="btnFclArea">
-                                        <p>
+                                        <p class="text-center align-middle">
                                             10,000,000
                                         </p>
-                                        <a href="/account_transfer" id="btnNext" class="btn_p">계좌 이체</a>
+                                        <a href="/account_transfer" class="btn_p">계좌 이체</a>
                                     </div>
                                 </td>
                             </tr>
@@ -124,8 +124,47 @@
                             </tbody>
                         </table>
 
+                        <div class="btnArea justify-content-center " id="acc_trans_inquiry">
+                            <%--                TODO: 계좌 거래내역 조회 기능--%>
+                            <a href="#//hana_bank" id="btnNext" class="btn_p">조회</a>
+                        </div>
                     </div>
                 </div>
+
+            </div>
+
+            <div class="transaction_history mt-5">
+                <table class="table table-striped table-hover table-bordered">
+                    <thead class="table-dark">
+                    <tr>
+                        <th>거래일시</th>
+                        <th>거래금액</th>
+                        <th>거래구분</th>
+                        <th>잔액</th>
+                        <th>거래대상</th>
+                        <th>거래대상 계좌번호</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <%-- Example Transaction Data --%>
+                    <tr>
+                        <td>2023-08-20 10:30:15</td>
+                        <td>1,000,000원</td>
+                        <td>입금</td>
+                        <td>10,500,000원</td>
+                        <td>김철수</td>
+                        <td>1234-5678-90</td>
+                    </tr>
+                    <tr>
+                        <td>2023-08-19 15:05:30</td>
+                        <td>500,000원</td>
+                        <td>출금</td>
+                        <td>9,500,000원</td>
+                        <td>이영희</td>
+                        <td>1234-5678-91</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
