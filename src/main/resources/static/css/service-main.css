@@ -25,7 +25,7 @@ body {
 /* 본문 영역--------------------------------------*/
 .main-area {
     grid-area: main-area;
-    grid-template-columns: 1.35fr 1fr;
+    grid-template-columns: 0.5fr 2fr;
     display: grid;
     max-height: 850px;
     margin-left: 15%;

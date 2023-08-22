@@ -1,8 +1,3 @@
-.main-area{
-    grid-template-columns: 0.1fr 2fr;
-    margin-top: 20px;
-}
-
 .navbar {
     width: 200px;
     overflow: auto;
@@ -14,6 +9,7 @@
     min-height: 100%;
     font-family: "Hana-bold", sans-serif;
     font-size: 17px;
+    align-items: flex-start;
 }
 
 .navbar ul {
