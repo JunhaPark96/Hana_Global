@@ -57,6 +57,7 @@
                             <col style="width:auto">
                         </colgroup>
                         <tbody>
+<%--                        성명 입력--%>
                         <tr>
                             <td class="th">성명</td>
                             <td>
@@ -66,6 +67,7 @@
                                 </div>
                             </td>
                         </tr>
+<%--                        외국인 등록번호 입력--%>
                         <tr>
                             <td class="th">외국인등록번호</td>
                             <td>
@@ -109,7 +111,7 @@
                                 </div>
                             </td>
                         </tr>
-                        <!-- 성별 -->
+                        <!-- 성별 시작 -->
                         <tr>
                             <td class="th">성별</td>
                             <td>
@@ -121,8 +123,10 @@
                                 </div>
                             </td>
                         </tr>
+                        <!-- 성별 끝 -->
 
 <%--                        TODO: 시간되면 휴대폰 인증 따로 빼기--%>
+<%--                        휴대폰 번호 시작--%>
                         <tr>
                             <td class="th">휴대폰 번호</td>
 <%--                            <th scope="row"><label for="mobile01">휴대폰 번호</label><em>*</em></th>--%>
@@ -140,34 +144,30 @@
                                 </div>
                             </td>
                         </tr>
+<%--                        휴대폰 번호 끝--%>
 
-                        <%--이메일--%>
+                        <%--이메일 시작--%>
                         <tr>
                             <td class="th"><b>주소</b></td>
                             <td>
                                 <div class="iptWrap">
-                                    <input type="text" class="ipt uiAct" id="postcode" name="sample4_postcode"
-                                           placeholder="우편번호">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                    </svg>
-
-
-                                    <button class="valiButton"  onclick="sample4_execDaumPostcode(event)">우편번호 찾기</button>
-                                    <br>
-                                    <input type="text" class="ipt uiAct" id="roadAddress"
-                                           name="roadAddress"
-                                           placeholder="도로명주소"><br>
-                                    <input type="text" class="ipt uiAct" id="jibunAddress"
-                                           name="jibunAddress"
-                                           placeholder="지번주소"><br>
-                                    <input type="text" class="ipt uiAct" id="detailAddress"
-                                           name="detailAddress"
-                                           placeholder="상세주소"><br>
+                                    <div class="postcodeContainer">
+                                        <input type="text" class="ipt uiAct" id="postcode" name="sample4_postcode" placeholder="우편번호">
+                                        <button class="valiButton" onclick="sample4_execDaumPostcode(event)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <input type="text" class="ipt uiAct" id="roadAddress" name="roadAddress" placeholder="도로명주소"><br>
+                                    <input type="text" class="ipt uiAct" id="jibunAddress" name="jibunAddress" placeholder="지번주소"><br>
+                                    <input type="text" class="ipt uiAct" id="detailAddress" name="detailAddress" placeholder="상세주소"><br>
                                     <input type="text" class="ipt uiAct" id="extraAddress" name="extraAddress" placeholder="참고항목">
                                 </div>
                             </td>
                         </tr>
+                        <%--이메일 끝--%>
+
                         </tbody>
                     </table>
                 </section>

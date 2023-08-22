@@ -1,3 +1,4 @@
+/*전체 폼 시작*/
 .iptWrap .ipt {
     width: 55%;
     padding: 10px;
@@ -9,19 +10,6 @@
 }
 .account-password-section .iptWrap .ipt {
     width: 10%;  /* 원하는 너비로 설정하세요. */
-}
-
-.uniformImg {
-    overflow: hidden;  /* 이미지가 이 컨테이너를 벗어나지 않도록 합니다. */
-    max-height: 200px; /* 적절한 높이를 설정합니다. 필요에 따라 값을 조절해주세요. */
-    max-width: 400px;
-    padding-bottom: 20px;
-}
-
-.uniformImg img {
-    display: block;
-    max-width: 100%;   /* 이미지의 최대 너비를 부모 요소의 100%로 제한합니다. */
-    height: auto;      /* 이미지의 높이를 자동으로 조절하여 원본 비율을 유지합니다. */
 }
 
 .txt{
@@ -48,61 +36,28 @@
     font-weight: bold;
     text-align: left;
 }
-/* 업로드 섹션 */
-/* 기본 스타일 초기화 */
-.uploadArea,
-.uploadField {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-}
+/* 전체 폼 끝*/
 
-/* 업로드 섹션 스타일 */
-.uploadArea {
-    width: 100%;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
-/* 각 업로드 필드 스타일 */
-.uploadField {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    background-color: #fff;
+/* 주소 css 시작*/
+.postcodeContainer {
+    display: flex;
+    align-items: center;
     position: relative;
+    width: 55%;
 }
 
-.uploadField label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 10px;
+.ipt {
+    flex: 1;
 }
 
-.uploadField input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+.valiButton {
+    position: absolute;
+    right: 5px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
-
-.uploadField .txt {
-    margin-top: 5px;
-    font-size: 12px;
-    color: #777;
-}
-
-/* 마지막 업로드 필드 마진 제거 */
-.uploadField:last-child {
-    margin-bottom: 0;
-}
+/* 주소 css 끝*/
 
 /*버튼*/
 .btnArea {
@@ -167,3 +122,4 @@ select.ipt.mini, .setPhone select.ipt {
     width: 200px;
     max-width: 100%;
 }
+
