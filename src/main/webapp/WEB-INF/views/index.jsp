@@ -104,6 +104,7 @@
         </div>
     </div>
     <footer>
+        게시판 링크: <a href="${pageContext.request.contextPath}/board"> 게시판 </a>
     </footer>
 </div>
 

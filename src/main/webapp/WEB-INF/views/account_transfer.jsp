@@ -120,7 +120,7 @@
                             <tr class="text">
                                 <th scope="row" class="text-center align-middle">은행선택</th>
                                 <td>
-                                    <select name="banks" class="form-select border-3 w-50" id="banks" >
+                                    <select name="receiverBank" class="form-select border-3 w-50" id="receiverBankSelect" >
                                         <option value="">Please select.</option>
                                         <option value="081" selected="selected">HANA BANK</option>
                                         <option value="039">THE GYOENGNAM BANK LTD</option>
@@ -190,10 +190,12 @@
                             <tr>
                                 <th scope="row" class="text-center align-middle">계좌번호</th>
                                 <td>
-                                    <div class="btnArea " id="">
+                                    <div class="btnArea " id="receiverAccountArea">
                                         <p class="text-center align-middle">
                                             690-11-028690
                                         </p>
+                                        <input type="text" id="receiverAccountNumber" placeholder="계좌번호 입력" />
+                                        <input type="button" class="btn btn-primary" id="checkReceiverBtn" value="조회" onclick="fetchReceiverName()">
                                     <input type="button" class="" id="bank_inquiry" value="조회">
 <%--                                        <a href="#//hana_bank" id="btnNext" class="btn_p">조회</a>--%>
                                     </input>
@@ -202,10 +204,8 @@
                             </tr>
 
                             <tr>
-                                <th scope="row" class="text-center align-middle">&nbsp;Recipient</th>
-                                <td>
-                                    박준하
-                                </td>
+                                <th scope="row" class="text-center align-middle">Recipient</th>
+                                <td id="receiverName">Please check the account number.</td>
                             </tr>
 
 
@@ -227,6 +227,14 @@
 <footer>
     푸터
 </footer>
+
+<script>
+    function fetchReceiverName() {
+        // For demonstration purposes, let's assume "박준하" is the name associated with the given account number.
+        // In a real-world scenario, you would make an AJAX request to a server to fetch the actual account holder's name.
+        document.getElementById('receiverName').textContent = "박준하";
+    }
+</script>
 </body>
 
 </html>
