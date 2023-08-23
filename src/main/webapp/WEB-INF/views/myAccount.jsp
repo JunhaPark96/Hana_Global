@@ -55,10 +55,14 @@
 <%--                            왼블럭--%>
                             <div class="col-md-4 gradient-custom text-center text-black">
                                 <!-- TODO: 왼쪽 파트 -->
-                                <img src="./images/account.png"
+                                <img src="./images/myAccount.png"
                                      alt="Avatar" class="img-fluid my-5" style="width: 130px;" />
+<%--                                <div class="myAccount"></div>--%>
                                 <h5 style="font-size:20px;"> 고객님</h5>
                                 <p>반갑습니다!</p>
+                                <div class="circle">
+
+                                </div>
                             </div>
 <%--                            오른쪽 블럭--%>
                             <div class="col-md-8 ">
