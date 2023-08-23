@@ -33,7 +33,7 @@
             <h2 class="h2-account">Account Transfer</h2>
 
             <%--                        송금구역--%>
-            <div class="account_transaction">
+            <div class="account_transaction withdraw-card">
                 <div class="col-md-12>                                                                                                                                                                                                                                                                      ">
                     <div class="card-body pe-5">
                         <table class="table table-hover mb-3 border-light">
@@ -43,7 +43,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr class="text">
+                            <tr class="text border-light">
                                 <th scope="row" class="text-center align-middle">&nbsp;&nbsp;계좌선택</th>
                                 <td>
                                     <select class="form-select border-3 w-50" name="withdrawAccountNo"
@@ -55,22 +55,32 @@
                                                     ${account.alias} (${account.accountNo})
                                             </option>
                                         </c:forEach>
+                                        <option value="123456789">1234-5678-9 (Example Account)</option>
+                                        <!-- 임의의 계좌 추가 -->
                                     </select>
                                 </td>
                             </tr>
 
-                            <tr>
+                            <tr class="border-light">
                                 <th scope="row" class="text-center align-middle">&nbsp;&nbsp;잔액</th>
                                 <td>
                                     <div class="btnArea" id="btnFclArea">
-                                        <p class="text-center align-middle">
-                                            10,000,000
+                                        <p class="text-center align-middle" id="balanceDisplay">
+                                            0
                                         </p>
                                     </div>
                                 </td>
                             </tr>
 
-                            <tr>
+                            <tr class="border-light">
+                                <th scope="row" class="text-center align-middle">&nbsp;&nbsp;비밀번호</th>
+                                <td>
+                                    <input type="password" name="account_password" id="account_password"
+                                           placeholder="계좌 비밀번호" maxlength="4"/>
+                                </td>
+                            </tr>
+
+                            <tr class="border-light">
                                 <th scope="row" class="text-center align-middle">&nbsp;&nbsp;송금 금액</th>
                                 <td>
                                     <%--                                    TODO: 계좌 연결, 금액 입력 받기--%>
@@ -103,11 +113,14 @@
                 </div>
             </div>
             <%--                    보내는사람 입력 끝--%>
-            <div>
-                아래 화살표
+            <div class="arrow-box">
+
+                <div class="arrow-div">
+                    <%--                TODO: 아래화살표 이미지--%>
+                </div>
             </div>
             <%--                    받는사람 입력--%>
-            <div class="account_transaction">
+            <div class="account_transaction deposit-card">
                 <div class="col-md-12">
                     <div class="card-body pe-5">
                         <table class="table table-hover mb-3 border-light">
@@ -120,7 +133,8 @@
                             <tr class="text">
                                 <th scope="row" class="text-center align-middle">은행선택</th>
                                 <td>
-                                    <select name="receiverBank" class="form-select border-3 w-50" id="receiverBankSelect" >
+                                    <select name="receiverBank" class="form-select border-3 w-50"
+                                            id="receiverBankSelect">
                                         <option value="">Please select.</option>
                                         <option value="081" selected="selected">HANA BANK</option>
                                         <option value="039">THE GYOENGNAM BANK LTD</option>
@@ -190,15 +204,13 @@
                             <tr>
                                 <th scope="row" class="text-center align-middle">계좌번호</th>
                                 <td>
-                                    <div class="btnArea " id="receiverAccountArea">
-                                        <p class="text-center align-middle">
-                                            690-11-028690
-                                        </p>
-                                        <input type="text" id="receiverAccountNumber" placeholder="계좌번호 입력" />
-                                        <input type="button" class="btn btn-primary" id="checkReceiverBtn" value="조회" onclick="fetchReceiverName()">
-                                    <input type="button" class="" id="bank_inquiry" value="조회">
-<%--                                        <a href="#//hana_bank" id="btnNext" class="btn_p">조회</a>--%>
-                                    </input>
+                                    <div class="btnArea text-center align-middle" id="receiverAccountArea">
+                                        <%--                                        <p class="text-center align-middle">--%>
+                                        <%--                                            690-11-028690--%>
+                                        <%--                                        </p>--%>
+                                        <input type="text" id="receiverAccountNumber" placeholder="계좌번호 입력"/>
+                                        <input type="button" class="btn btn-primary" id="checkReceiverBtn" value="조회"
+                                               onclick="fetchReceiverName()">
                                     </div>
                                 </td>
                             </tr>
@@ -233,6 +245,22 @@
         // For demonstration purposes, let's assume "박준하" is the name associated with the given account number.
         // In a real-world scenario, you would make an AJAX request to a server to fetch the actual account holder's name.
         document.getElementById('receiverName').textContent = "박준하";
+    }
+</script>
+<script>
+    function changeBallance() {
+        let selectedAccount = document.getElementById('selectSenderAccount').value;
+        let balance = document.getElementById('balanceDisplay');
+
+        if (selectedAccount === "123456789") {
+            balance.textContent = "1,500,000"; // 임의의 잔액
+        } else {
+            balance.textContent = "0"; // 기타 계좌들에 대한 잔액, 실제 시나리오에서는 서버에서 가져올 데이터입니다.
+        }
+    }
+
+    function selectAmount(amount) {
+        document.getElementById('transfer_amount').value = amount;
     }
 </script>
 </body>
